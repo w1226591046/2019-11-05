@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Foo(name,zge){
+            this.name = name;
+            this.zge = zge;
+
+        }
+        Foo.prototype.sex = '男';
+       let p = new Foo('火影',20)
+       console.log(p.hasOwnProperty('name'))
+       console.log(p.hasOwnProperty('sex'))
+
+
+       let obj = {
+           name: 'xx',
+           zge: 20
+         
+       }
+       Object.prototype.sex = 'nan'
+       console.log(obj.sex)
+       for(let dd in obj){
+           if(obj.hasOwnProperty(dd)){
+               console.log(dd)
+           }
+       }
+    </script>
+
+</body>
+</html>
